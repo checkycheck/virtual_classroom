@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+    <div class="alert alert-secondty text-center">
+        <h1>ALL Picture  {{postnum}}</h1>
+    </div>
+    
+
+
+    <table class="table table-bordered">
+        <thead class="bg-dark">
+           <tr class="text-white text-center">
+               <th>description</th>
+               <th>delete</th>
+               {{!-- <h1>{{post.count}}</h1> --}}
+           </tr>
+        </thead>
+        <tbody class="text-center ">
+            {{#each posts}}
+            <tr>
+                
+                <td>{{description}}</td>
+                <td class="d-flex">
+                     <form action="/admin/posts/delete/{{id}}?newMethod=DELETE" method="post">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete Post</button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<div class="col-lg-2"></div>
+</div>
+</div>
+
+
+

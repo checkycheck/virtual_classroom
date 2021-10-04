@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+    <div class="alert alert-secondty text-center">
+        <h1>ALL VIDEOS</h1>
+    </div>
+    
+    <table class="table table-bordered">
+        <thead class="bg-dark">
+           <tr class="text-white text-center">
+               <th>description</th>
+               <th>delete</th>
+           </tr>
+        </thead>
+        <tbody class="text-center ">
+            {{#each plays}}
+            <tr>
+                <td>{{description}}</td>
+                <td class="d-flex">
+                     <form action="/admin/plays/delete/{{id}}?newMethod=DELETE" method="post">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete video</button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<div class="col-lg-2"></div>
+</div>
+</div>
+
+
+
